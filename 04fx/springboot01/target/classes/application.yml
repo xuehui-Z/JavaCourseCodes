@@ -1,11 +1,6 @@
 server:
   port: 8081
 
-diy:
-  stu:
-    id: 1
-    name: xiyaun
-
 spring:
   activemq:
     broker-url: tcp://127.0.0.1:61616

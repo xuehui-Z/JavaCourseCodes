@@ -1,6 +1,7 @@
 package io.kimmking.springjms;
 
 import io.kimmking.spring01.Student;
+import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
@@ -14,9 +15,10 @@ import javax.jms.Session;
 public class SendService {
     @Autowired
     JmsTemplate jmsTemplate;
-    
+    @Autowired
+    ActiveMQQueue queue;
     public void send(final Student user) {
-        jmsTemplate.send("test.queue", new MessageCreator() {
+        jmsTemplate.send(queue, new MessageCreator() {
             
             public Message createMessage(Session session) throws JMSException {
                 return session.createObjectMessage(user);
