@@ -46,7 +46,7 @@
 
 		<dependency>
 			<groupId>len.xiyuan.spring.boot</groupId>
-			<artifactId>len-xiyuan-spring-boot-starter</artifactId>
+			<artifactId>test-starter</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		

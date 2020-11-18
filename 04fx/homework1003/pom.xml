@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>len.xiyuan.spring.boot</groupId>
-	<artifactId>len-xiyuan-spring-boot-starter</artifactId>
+	<artifactId>test-starter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot Starter</description>
@@ -28,13 +28,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>io.kimmking</groupId>
-			<artifactId>springboot01</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
 
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

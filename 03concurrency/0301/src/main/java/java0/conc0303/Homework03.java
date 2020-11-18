@@ -27,7 +27,7 @@ public class Homework03 {
         // 然后退出main线程
     }
     
-    private static int sum() {
+    static int sum() {
         return fibo(36);
     }
     

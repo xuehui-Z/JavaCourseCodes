@@ -4,7 +4,7 @@ server:
 diy:
   stu:
     id: 1
-    name: xiyaun
+    name: xiyuan
 
 spring:
   activemq:
