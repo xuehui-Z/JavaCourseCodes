@@ -16,7 +16,7 @@ public class MyDataSql {
     static final String dbDriver = "com.mysql.jdbc.Driver";
     static final String url = "jdbc:mysql://localhost:3306/eplat?rewriteBatchedStatements=true";
     static final String username = "july";
-    static final String password = "a123";
+    static final String password = "!QAZ2wsx";
 
 
     public static DataSource hikariDataSource() {
@@ -38,10 +38,15 @@ public class MyDataSql {
         //订单数据
         long start=System.currentTimeMillis();
         createBigOrderData(conn,1000000);
-        System.out.println("生成订单数据耗时："+ (System.currentTimeMillis()-start) / 1000 + " s");
+        System.out.println("生成100万条订单数据耗时："+ (System.currentTimeMillis()-start) / 1000 + " s");
 
     }
 
+    /**
+     * 生成数据
+     * @param conn
+     * @param count
+     */
     private static void createBigOrderData(Connection conn, int count) {
         String sql = "insert into t_order(id,user_id,addr_id,goods_id,unit_price,quantity,amount,actice_id,snapshot_id,real_price,real_amount)" +
                 " values(?,?,?,?,?,?,?,?,?,?,?)";
